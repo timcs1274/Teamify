@@ -1,0 +1,29 @@
+{
+  "name": "teamify",
+  "version": "1.0.0",
+  "description": "**",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timcs1274/Teamify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timcs1274/Teamify/issues"
+  },
+  "homepage": "https://github.com/timcs1274/Teamify#readme",
+  "dependencies": {
+    "inquirer": "8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
