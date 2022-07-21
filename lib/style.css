@@ -1,0 +1,15 @@
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(216, 96, 96);
+    color: whitesmoke;
+    padding: 20px;
+}
+.card-body{
+    background-color: rgb(111, 111, 224);
+    color: whitesmoke;
+}
+.list-group-item{
+    background-color: rgb(196, 195, 195);
+}
