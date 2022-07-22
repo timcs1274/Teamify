@@ -1,5 +1,12 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const path = require('path');
+const outputDist = path.resolve(__dirname, 'dist');
+const outputPath = path.join(outputDist, 'index.html') //change to the generated html file name
+
 
 function createManager(){
     inquirer.prompt([
