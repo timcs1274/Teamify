@@ -1,10 +1,24 @@
-const { default: test } = require('node:test')
 const Employee = require('../lib/Employee')
 
 test('can create an employee object', () => {
     const employee = new Employee()
     expect(typeof(employee)).toBe('object')
 });
+
+test('can create an engineer object', () => {
+    const engineer = new Employee()
+    expect(typeof(engineer)).toBe('object')
+});
+
+test('can create an intern object', () => {
+    const intern = new Employee()
+    expect(typeof(intern)).toBe('object')
+})
+
+test('can create a manager object', () => {
+    const manager = new Employee()
+    expect(typeof(manager)).toBe('object')
+})
 
 test('can set name via constructor args', () => {
     const name = 'Tim'
