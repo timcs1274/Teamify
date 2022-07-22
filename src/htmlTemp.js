@@ -54,6 +54,21 @@ const generateTeam = team => {
         `;
     };
 
+    const htmlArr = [];
+
+    htmlArr.push(team
+        .filter(employee => employee.getRole() === 'Manager')
+        .map(manager => generateManager(manager)));
+    htmlArr.push(team
+        .filter(employee => employee.getRole() === 'Engineer')
+        .map(engineer => generateEngineer(engineer))
+        .join(''));
+    htmlArr.push(team
+        .filter(employee => employee.getRole() === 'Intern')
+        .map(intern => generateIntern(intern))
+        .join(''));
+    
+return htmlArr.join('');
 
 
 
