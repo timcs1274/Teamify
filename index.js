@@ -55,5 +55,30 @@ function createEngineer(){
 }
 createEngineer()
 
+function createIntern(){
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'internName',
+            message: `What is the intern's name?`,
+        },
+        {
+            type: 'input',
+            name: 'internId',
+            message: `What is the intern's ID?`,
+        },
+        {
+            type: 'input',
+            name: 'internEmail',
+            message: `What is the intern's email?`,
+        },
+        {
+            type: 'input',
+            name: 'internSchool',
+            message: `What school does the intern attend?`,
+        },
+    ]).then(answers => {console.log(answers)})
+}
+createIntern()
 
 
