@@ -5,7 +5,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const path = require('path');
 const outputDist = path.resolve(__dirname, 'dist');
-const outputPath = path.join(outputDist, 'index.html') //change to the generated html file name
+const outputPath = path.join(outputDist, 'hmtlTemp') 
 const generateTeam = require('./src/htmlTemp');
 
 teamMembers = [];
@@ -31,7 +31,7 @@ function createEverything (){
                     createIntern();
                     break;
                 default:
-                    //add the html function
+                    createHTML();
                     
             }
         })

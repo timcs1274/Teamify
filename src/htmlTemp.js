@@ -1,6 +1,7 @@
 const generateTeam = team => {
 
     const generateManager = manager => {
+        console.log(manager)
         return `
         <div class="col">
             <div class="card" style="width: 18rem;">
@@ -9,7 +10,7 @@ const generateTeam = team => {
                   <p class="card-text">${manager.getRole()}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">ID: ${manager.getId()} </li>
+                  <li class="list-group-item">ID: ${manager.getID()} </li>
                   <li class="list-group-item">Email: ${manager.getEmail()} </li>
                   <li class="list-group-item">Office Number: ${manager.getOffice()}</li>
                 </ul>
@@ -27,7 +28,7 @@ const generateTeam = team => {
                   <p class="card-text">${engineer.getRole()}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">ID: ${engineer.getId()}</li>
+                  <li class="list-group-item">ID: ${engineer.getID()}</li>
                   <li class="list-group-item">Email: ${engineer.getEmail()}</li>
                   <li class="list-group-item">Github username: ${engineer.getGithub()}</li>
                 </ul>
@@ -45,7 +46,7 @@ const generateTeam = team => {
                 <p class="card-text">${intern.getRole()}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">ID: ${intern.getId()}</li>
+                  <li class="list-group-item">ID: ${intern.getID()}</li>
                   <li class="list-group-item">Email: ${intern.getEmail()}</li>
                   <li class="list-group-item">Intern's School: ${intern.getSchool()}</li>
                 </ul>

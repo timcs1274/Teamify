@@ -22,36 +22,36 @@ test('can create a manager object', () => {
 
 test('can set name via constructor args', () => {
     const name = 'Tim'
-    const employee = new Employee()
-    expect(employee.name).toBe(name)
+    const employee = new Employee('Tim', 1, 'testing@gmail.com')
+    expect(employee.getName()).toBe(name)
 });
 
 test('can set id via constructor args', () => {
-    const id = '1'
-    const employee = new Employee()
-    expect(employee.id).toBe(id)
+    const id = 1
+    const employee = new Employee('Tim', 1, 'testing@gmail.com')
+    expect(employee.getID()).toBe(id)
 });
 
 test('can set email via constructor args', () => {
     const email = 'testing@gmail.com'
-    const employee = new Employee()
-    expect(employee.email).toBe(email)
+    const employee = new Employee('Tim', 1, 'testing@gmail.com')
+    expect(employee.getEmail()).toBe(email)
 });
 
 test('can get name via getName()', () => {
     const name = 'Tim'
-    const employee = new Employee()
+    const employee = new Employee('Tim', 1, 'testing@gmail.com')
     expect(employee.getName()).toBe(name)
 });
 
 test('can get id via getId()', () => {
     const id = 1
-    const employee = new Employee()
-    expect(employee.getId()).toBe(id)
+    const employee = new Employee('Tim', 1, 'testing@gmail.com')
+    expect(employee.getID()).toBe(id)
 });
 
 test('can get email via getEmail()', () => {
     const email = 'testing@gmail.com'
-    const employee = new Employee()
+    const employee = new Employee('Tim', 1, 'testing@gmail.com')
     expect(employee.getEmail()).toBe(email)
 });
