@@ -6,6 +6,10 @@ const Intern = require('./lib/Intern');
 const path = require('path');
 const outputDist = path.resolve(__dirname, 'dist');
 const outputPath = path.join(outputDist, 'index.html') //change to the generated html file name
+const generateTeam = require('./src/htmlTemp');
+
+teamMembers = [];
+
 
 function createEverything (){
 
@@ -59,10 +63,14 @@ function createManager(){
             message: `What is the manager's office number?`,
         }
         
-    ]).then(answers => {console.log(answers)})
+    ]).then(answers => {
+        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice);
+        teamMembers.push(manager);
+        createTeam();
+    });
 }
 
-createManager()
+
 
 function createEngineer(){
     inquirer.prompt([
@@ -86,9 +94,13 @@ function createEngineer(){
             name: 'engineerGithub',
             message: `What is the engineer's Github username?`,
         }
-    ]).then(answers => {console.log(answers)})
+    ]).then(answers => {
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+        teamMembers.push(engineer);
+        createTeam();
+    });
 }
-createEngineer()
+
 
 function createIntern(){
     inquirer.prompt([
@@ -112,9 +124,19 @@ function createIntern(){
             name: 'internSchool',
             message: `What school does the intern attend?`,
         },
-    ]).then(answers => {console.log(answers)})
+    ]).then(answers => {
+        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+        teamMembers.push(intern);
+        createTeam();
+    });
 }
-createIntern()
 
+function createHTML () {
+    fs.writeFileSync(outputPath, generateTeam(teamMembers), 'utf-8')
+}
+
+createTeam();
 
 }
+
+createEverything();
