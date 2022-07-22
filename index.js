@@ -7,6 +7,34 @@ const path = require('path');
 const outputDist = path.resolve(__dirname, 'dist');
 const outputPath = path.join(outputDist, 'index.html') //change to the generated html file name
 
+function createEverything (){
+
+    function createTeam() {
+        inquirer.prompt([{
+            type: 'list',
+            name: 'addEmployee',
+            message: 'Which type of employee do you wish to add to the team?',
+            choices: ['Manager', 'Engineer', 'Intern', 'None']
+        }]).then(function (userInput) {
+            switch(userInput.addEmployee) {
+                case 'Manager':
+                    createManager();
+                    break;
+                case 'Engineer':
+                    createEngineer();
+                    break;
+                case 'Intern':
+                    createIntern();
+                    break;
+                default:
+                    //add the html function
+                    
+            }
+        })
+    }
+
+
+
 
 function createManager(){
     inquirer.prompt([
@@ -89,3 +117,4 @@ function createIntern(){
 createIntern()
 
 
+}
