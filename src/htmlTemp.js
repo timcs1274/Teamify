@@ -18,5 +18,43 @@ const generateTeam = team => {
         `;
     };
 
-    
+    const generateEngineer = engineer => {
+        return `
+    <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">${engineer.getName()}</h5>
+                  <p class="card-text">${engineer.getRole()}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">ID: ${engineer.getId()}</li>
+                  <li class="list-group-item">Email: ${engineer.getEmail()}</li>
+                  <li class="list-group-item">Github username: ${engineer.getGithub()}</li>
+                </ul>
+              </div>
+          </div>
+        `;
+    };
+
+    const generateIntern = intern => {
+        return `
+    <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">${intern.getName()}</h5>
+                <p class="card-text">${intern.getRole()}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">ID: ${intern.getId()}</li>
+                  <li class="list-group-item">Email: ${intern.getEmail()}</li>
+                  <li class="list-group-item">Intern's School: ${intern.getSchool()}</li>
+                </ul>
+              </div>
+          </div>
+        `;
+    };
+
+
+
+
 }
